@@ -49,13 +49,6 @@ public class ChippedBlocks {
     public static final List<RegistryObject<CarvedPumpkinBlock>> SPECIAL_CARVED_PUMPKINS = new ArrayList<>();
     public static final List<RegistryObject<CarvedPumpkinBlock>> VANILLA_CARVED_PUMPKINS = new ArrayList<>();
 
-    // Simple Blocks which have 18 of its own variant
-    // Check ChippedBlocks/ItemTagsProvider before editing!
-    public static final List<ChippedBlockType<Block>> stones18 = Stream.of(
-            "granite", "diorite", "andesite", "prismarine", "dark_prismarine", "purpur_block", "quartz_block",
-            "sandstone", "red_sandstone", "nether_bricks", "red_nether_bricks"
-    ).map(ChippedBlockType::new).collect(Collectors.toList());
-
     public static final String[] specialPumpkinList = {"end", "end2", "nether"};
     public static final String[] carvedPumpkinList = {"happy", "angry", "bigeyes", "bighappy", "boo", "bruh", "classic", "enthusiastic",
             "grinning", "kawaii", "mourn", "owo", "plotting", "sans", "scared", "smallhappy", "squashy", "stretchy", "upsidedown"};
@@ -104,18 +97,36 @@ public class ChippedBlocks {
 
     public static void register() {
         // Register Stones
-        for (ChippedBlockType<Block> type : stones18) {
-            registerVanillaBlocks(BenchType.MASON, type, 18);
-        }
-
-        registerVanillaBlocks(BenchType.MASON, STONE, 18);
-        registerVanillaBlocks(BenchType.MASON, COBBLESTONE, 18);
-        registerVanillaBlocks(BenchType.MASON, END_STONE, 18);
-        registerVanillaBlocks(BenchType.MASON, NETHERRACK, 18);
-
-        registerVanillaBlocks(BenchType.MASON, Blocks.GILDED_BLACKSTONE, GILDED_BLACKSTONES, 26);
-        registerVanillaBlocks(BenchType.MASON, Blocks.BLACKSTONE, BLACKSTONES, 21);
-        registerVanillaBlocks(BenchType.MASON, Blocks.BASALT, BASALTS, 20);
+        registerVanillaBlocks(BenchType.MASON, ANDESITE, 69);
+        registerVanillaBlocks(BenchType.MASON, DIORITE, 69);
+        registerVanillaBlocks(BenchType.MASON, GRANITE, 69);
+        registerVanillaBlocks(BenchType.MASON, BASALT, 69);
+        registerVanillaBlocks(BenchType.MASON, MOSSY_COBBLESTONE, 69);
+        registerVanillaBlocks(BenchType.MASON, BRICKS, 133);
+        registerVanillaBlocks(BenchType.MASON, COBBLESTONE, 69);
+        registerVanillaBlocks(BenchType.MASON, END_STONE, 69);
+        registerVanillaBlocks(BenchType.MASON, MOSSY_STONE_BRICKS, 69);
+        registerVanillaBlocks(BenchType.MASON, DARK_PRISMARINE, 69);
+        registerVanillaBlocks(BenchType.MASON, NETHER_BRICKS, 69);
+        registerVanillaBlocks(BenchType.MASON, NETHERRACK, 69);
+        registerVanillaBlocks(BenchType.MASON, PRISMARINE, 69);
+        registerVanillaBlocks(BenchType.MASON, PURPUR_BLOCK, 69);
+        registerVanillaBlocks(BenchType.MASON, QUARTZ_BLOCK, 69);
+        registerVanillaBlocks(BenchType.MASON, RED_NETHER_BRICKS, 69);
+        registerVanillaBlocks(BenchType.MASON, RED_SANDSTONE, 69);
+        registerVanillaBlocks(BenchType.MASON, SANDSTONE, 69);
+        registerVanillaBlocks(BenchType.MASON, SMOOTH_STONE, 69);
+        registerVanillaBlocks(BenchType.MASON, Blocks.GILDED_BLACKSTONE, GILDED_BLACKSTONES, 69);
+        registerVanillaBlocks(BenchType.MASON, Blocks.BLACKSTONE, BLACKSTONES, 69);
+        registerVanillaBlocks(BenchType.MASON, STONE, 69);
+        registerVanillaBlocks(BenchType.ALCHEMY, LAPIS_BLOCK, 69);
+        registerVanillaBlocks(BenchType.ALCHEMY, COAL_BLOCK, 69);
+        registerVanillaBlocks(BenchType.MECHANIST, REDSTONE_BLOCK, 69);
+        registerVanillaBlocks(BenchType.ALCHEMY, LODESTONE, 69);
+        registerVanillaBlocks(BenchType.ALCHEMY, MAGMA_BLOCK, 69);
+        registerVanillaBlocks(BenchType.ALCHEMY, OBSIDIAN, 69);
+        final BlockBehaviour.Properties CRYING_OBSIDIAN_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.CRYING_OBSIDIAN);
+        registerBlocks(BenchType.ALCHEMY, CRYING_OBSIDIAN, () -> new CryingObsidianBlock(CRYING_OBSIDIAN_PROPERTIES), 69);
 
         for (int id = 0; id < 16; ++id) {
             DyeColor color = DyeColor.byId(id);
@@ -124,8 +135,6 @@ public class ChippedBlocks {
         }
 
         registerVanillaBlocks(BenchType.ALCHEMY, Blocks.OBSIDIAN, OBSIDIAN, 20);
-        final BlockBehaviour.Properties CRYING_OBSIDIAN_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.CRYING_OBSIDIAN);
-        registerBlocks(BenchType.ALCHEMY, CRYING_OBSIDIAN, () -> new CryingObsidianBlock(CRYING_OBSIDIAN_PROPERTIES), 20);
         registerVanillaBlocks(BenchType.ALCHEMY, Blocks.GLOWSTONE, GLOWSTONES, 20);
         registerVanillaBlocks(BenchType.ALCHEMY, Blocks.SEA_LANTERN, SEA_LANTERNS, 16);
         registerVanillaBlocks(BenchType.BOTANIST, Blocks.SHROOMLIGHT, SHROOMLIGHTS, 16);

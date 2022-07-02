@@ -61,7 +61,7 @@ public class ChippedBlockTagsProvider extends BlockTagsProvider {
 		tag(BlockTags.DRAGON_IMMUNE).addTag(CRYING_OBSIDIAN.getBlockTag());
 
 		tag(BlockTags.CLIMBABLE).addTag(VINES.getBlockTag());
-		
+
 		tag(BlockTags.WALL_POST_OVERRIDE).addTag(TORCHES.getBlockTag());
 		tag(BlockTags.WALL_POST_OVERRIDE).addTag(REDSTONE_TORCHES.getBlockTag());
 
@@ -73,15 +73,33 @@ public class ChippedBlockTagsProvider extends BlockTagsProvider {
 		tag(BlockTags.HOGLIN_REPELLENTS).addTag(WARPED_FUNGUS.getBlockTag());
 
 		//Default Forge tags
-		tag(Tags.Blocks.STONE).addTag(STONE.getBlockTag()).addTag(ChippedBlocks.stones18.get(0).getBlockTag()).addTag(ChippedBlocks.stones18.get(1).getBlockTag()).addTag(ChippedBlocks.stones18.get(2).getBlockTag());
+		tag(Tags.Blocks.STONE)
+				.addTag(ANDESITE.getBlockTag())
+				.addTag(STONE.getBlockTag())
+				.addTag(DIORITE.getBlockTag())
+				.addTag(GRANITE.getBlockTag())
+				.addTag(BASALT.getBlockTag())
+				.addTag(MOSSY_STONE_BRICKS.getBlockTag())
+				.addTag(BRICKS.getBlockTag())
+				.addTag(CLAYS.getBlockTag())
+				.addTag(DARK_PRISMARINE.getBlockTag())
+				.addTag(PRISMARINE.getBlockTag())
+				.addTag(GILDED_BLACKSTONES.getBlockTag())
+				.addTag(COAL_BLOCK.getBlockTag())
+				.addTag(REDSTONE_BLOCK.getBlockTag())
+				.addTag(LODESTONE.getBlockTag())
+				.addTag(MAGMA_BLOCK.getBlockTag())
+				.addTag(PURPUR_BLOCK.getBlockTag())
+				.addTag(QUARTZ_BLOCK.getBlockTag())
+				.addTag(RED_NETHER_BRICKS.getBlockTag())
+				.addTag(RED_SANDSTONE.getBlockTag())
+				.addTag(SANDSTONE.getBlockTag())
+				.addTag(SMOOTH_STONE.getBlockTag())
+				.addTag(NETHER_BRICKS.getBlockTag());
 
 		tag(Tags.Blocks.COBBLESTONE).addTag(COBBLESTONE.getBlockTag());
 
 		tag(Tags.Blocks.END_STONES).addTag(END_STONE.getBlockTag());
-		
-		tag(Tags.Blocks.SANDSTONE).addTag(ChippedBlocks.stones18.get(7).getBlockTag()).addTag(ChippedBlocks.stones18.get(8).getBlockTag());
-		tag(BlockTags.create(new ResourceLocation("forge", "sandstone/colorless"))).addTag(ChippedBlocks.stones18.get(7).getBlockTag());
-		tag(BlockTags.create(new ResourceLocation("forge", "sandstone/red"))).addTag(ChippedBlocks.stones18.get(8).getBlockTag());
 
 		tag(Tags.Blocks.GLASS).addTag(GLASSES.getBlockTag());
 		tag(Tags.Blocks.GLASS_COLORLESS).addTag(GLASSES.getBlockTag());

@@ -58,11 +58,31 @@ public class ChippedBlockTypes {
 
     public static final ChippedBlockType<Block> STONE = new ChippedBlockType<>("stone");
     public static final ChippedBlockType<Block> COBBLESTONE = new ChippedBlockType<>("cobblestone");
+    public static final ChippedBlockType<Block> MOSSY_COBBLESTONE = new ChippedBlockType<>("mossy_cobblestone");
     public static final ChippedBlockType<Block> END_STONE = new ChippedBlockType<>("end_stone");
     public static final ChippedBlockType<Block> NETHERRACK = new ChippedBlockType<>("netherrack");
-
+    public static final ChippedBlockType<Block> ANDESITE = new ChippedBlockType<>("andesite");
+    public static final ChippedBlockType<Block> DIORITE = new ChippedBlockType<>("diorite");
+    public static final ChippedBlockType<Block> BASALT = new ChippedBlockType<>("basalt");
+    public static final ChippedBlockType<Block> MOSSY_STONE_BRICKS = new ChippedBlockType<>("mossy_stone_bricks");
+    public static final ChippedBlockType<Block> BRICKS = new ChippedBlockType<>("bricks");
     public static final ChippedBlockType<Block> GILDED_BLACKSTONES = new ChippedBlockType<>("gilded_blackstone");
     public static final ChippedBlockType<Block> BLACKSTONES = new ChippedBlockType<>("blackstone");
+    public static final ChippedBlockType<Block> DARK_PRISMARINE = new ChippedBlockType<>("dark_prismarine");
+    public static final ChippedBlockType<Block> GRANITE = new ChippedBlockType<>("granite");
+    public static final ChippedBlockType<Block> LAPIS_BLOCK = new ChippedBlockType<>("lapis_block");
+    public static final ChippedBlockType<Block> COAL_BLOCK = new ChippedBlockType<>("coal_block");
+    public static final ChippedBlockType<Block> LODESTONE = new ChippedBlockType<>("lodestone");
+    public static final ChippedBlockType<Block> MAGMA_BLOCK = new ChippedBlockType<>("magma_block");
+    public static final ChippedBlockType<Block> NETHER_BRICKS = new ChippedBlockType<>("nether_bricks");
+    public static final ChippedBlockType<Block> PRISMARINE = new ChippedBlockType<>("prismarine");
+    public static final ChippedBlockType<Block> PURPUR_BLOCK = new ChippedBlockType<>("purpur_block");
+    public static final ChippedBlockType<Block> QUARTZ_BLOCK = new ChippedBlockType<>("quartz_block");
+    public static final ChippedBlockType<Block> RED_SANDSTONE = new ChippedBlockType<>("red_sandstone");
+    public static final ChippedBlockType<Block> RED_NETHER_BRICKS = new ChippedBlockType<>("red_nether_bricks");
+    public static final ChippedBlockType<Block> REDSTONE_BLOCK = new ChippedBlockType<>("redstone_block");
+    public static final ChippedBlockType<Block> SANDSTONE = new ChippedBlockType<>("sandstone");
+    public static final ChippedBlockType<Block> SMOOTH_STONE = new ChippedBlockType<>("smooth_stone");
     public static final ChippedBlockType<Block> BASALTS = new ChippedBlockType<>("basalt");
     public static final ChippedBlockType<Block> CLAYS = new ChippedBlockType<>("clay");
     public static final ChippedBlockType<Block> DRIED_KELP_BLOCKS = new ChippedBlockType<>("dried_kelp_block");

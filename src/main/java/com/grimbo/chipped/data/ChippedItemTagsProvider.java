@@ -51,15 +51,34 @@ public class ChippedItemTagsProvider extends ItemTagsProvider {
 		tag(ItemTags.PIGLIN_REPELLENTS).addTag(ChippedBlockTypes.SOUL_LANTERNS.getItemTag());
 
 		//Default Forge tags
-		tag(Tags.Items.STONE).addTag(STONE.getItemTag()).addTag(ChippedBlocks.stones18.get(0).getItemTag()).addTag(ChippedBlocks.stones18.get(1).getItemTag()).addTag(ChippedBlocks.stones18.get(2).getItemTag());
+		tag(Tags.Items.STONE)
+				.addTag(STONE.getItemTag())
+				.addTag(ANDESITE.getItemTag())
+				.addTag(DIORITE.getItemTag())
+				.addTag(GRANITE.getItemTag())
+				.addTag(BASALT.getItemTag())
+				.addTag(MOSSY_STONE_BRICKS.getItemTag())
+				.addTag(BRICKS.getItemTag())
+				.addTag(CLAYS.getItemTag())
+				.addTag(DARK_PRISMARINE.getItemTag())
+				.addTag(PRISMARINE.getItemTag())
+				.addTag(GILDED_BLACKSTONES.getItemTag())
+				.addTag(COAL_BLOCK.getItemTag())
+				.addTag(REDSTONE_BLOCK.getItemTag())
+				.addTag(LODESTONE.getItemTag())
+				.addTag(MAGMA_BLOCK.getItemTag())
+				.addTag(PURPUR_BLOCK.getItemTag())
+				.addTag(QUARTZ_BLOCK.getItemTag())
+				.addTag(RED_NETHER_BRICKS.getItemTag())
+				.addTag(RED_SANDSTONE.getItemTag())
+				.addTag(SANDSTONE.getItemTag())
+				.addTag(SMOOTH_STONE.getItemTag())
+				.addTag(NETHER_BRICKS.getItemTag());
 
 		tag(Tags.Items.COBBLESTONE).addTag(COBBLESTONE.getItemTag());
 
 		tag(Tags.Items.END_STONES).addTag(END_STONE.getItemTag());
 
-		tag(Tags.Items.SANDSTONE).addTag(ChippedBlocks.stones18.get(7).getItemTag()).addTag(ChippedBlocks.stones18.get(8).getItemTag());
-		tag(ItemTags.create(new ResourceLocation("forge", "sandstone/colorless"))).addTag(ChippedBlocks.stones18.get(7).getItemTag());
-		tag(ItemTags.create(new ResourceLocation("forge", "sandstone/red"))).addTag(ChippedBlocks.stones18.get(8).getItemTag());
 
 		tag(Tags.Items.GLASS).addTag(GLASSES.getItemTag());
 		tag(Tags.Items.GLASS_COLORLESS).addTag(GLASSES.getItemTag());
