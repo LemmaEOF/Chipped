@@ -13,6 +13,7 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static com.grimbo.chipped.block.ChippedBlockTypes.*;
 
@@ -27,14 +28,13 @@ public class ChippedBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-        for (ChippedBlockType<Block> type : ChippedBlocks.stones18) {
-            createCubeFromList(type);
-        }
-
         createCubeFromList(
-                STONE, COBBLESTONE, END_STONE, NETHERRACK, GILDED_BLACKSTONES, BLACKSTONES, BASALTS,
+                STONE, COBBLESTONE, END_STONE, NETHERRACK, GILDED_BLACKSTONES, BLACKSTONES,
                 OBSIDIAN, CRYING_OBSIDIAN, CLAYS, GLASSES, GLOWSTONES, SEA_LANTERNS, SHROOMLIGHTS,
-                BROWN_MUSHROOM_BLOCK, RED_MUSHROOM_BLOCK, WARPED_WART_BLOCK, NETHER_WART_BLOCK, SOUL_SANDS
+                BROWN_MUSHROOM_BLOCK, RED_MUSHROOM_BLOCK, WARPED_WART_BLOCK, NETHER_WART_BLOCK, SOUL_SANDS, MOSSY_COBBLESTONE, ANDESITE,
+                DIORITE, BASALT, MOSSY_STONE_BRICKS, BRICKS, DARK_PRISMARINE, GRANITE, LAPIS_BLOCK,
+                COAL_BLOCK, LODESTONE, MAGMA_BLOCK, NETHER_BRICKS, PRISMARINE, PURPUR_BLOCK, QUARTZ_BLOCK, RED_NETHER_BRICKS,
+                RED_SANDSTONE, REDSTONE_BLOCK, SANDSTONE, SMOOTH_STONE
         );
 
         registerGlassPanes(GLASS_PANES, "glass", "glass_pane_1_top", 1, 6);
@@ -272,7 +272,7 @@ public class ChippedBlockStateProvider extends BlockStateProvider {
 
     // Very janky, will try to attempt to pull from glass_pane/glass_pane_top for stained_glass_pane because of how the textures were designed, might need to rework depending on future textures
     private <T extends Block> void registerGlassPanes(ChippedBlockType<T> type, String glassPaneName, String originalType, String originalPath, String topName, int start, int end) {
-        List<RegistryObject<T>> blocks = type.getBlocks().stream().filter(t -> t.getId().getPath().startsWith(glassPaneName)).toList();
+        List<RegistryObject<T>> blocks = type.getBlocks().stream().filter(t -> t.getId().getPath().startsWith(glassPaneName)).collect(Collectors.toList());
         for (int i = start; i <= end; i++) {
             String block = glassPaneName + "_" + i;
             String originalBlock = originalType + "_" + i;
