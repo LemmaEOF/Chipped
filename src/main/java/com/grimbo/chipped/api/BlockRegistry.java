@@ -15,14 +15,14 @@ public class BlockRegistry {
     public static <T extends Block> void addBlock(BenchType benchType, ChippedBlockType<T> blockType, RegistryObject<T> block) {
         blockType.getBlocks().add(block);
         BLOCKS.add((ChippedBlockType<Block>) blockType);
-        BENCH_TAGS.put(benchType, Chipped.MOD_ID + ":" + blockType);
+        BENCH_TAGS.put(benchType, blockType.toString());
     }
 
     @SuppressWarnings("unchecked")
     public static <T extends Block> void addGenericBlock(BenchType benchType, ChippedBlockType<Block> blockType, RegistryObject<T> block) {
         blockType.getBlocks().add((RegistryObject<Block>) block);
         BLOCKS.add(blockType);
-        BENCH_TAGS.put(benchType, Chipped.MOD_ID + ":" + blockType);
+        BENCH_TAGS.put(benchType, blockType.toString());
     }
 
 
