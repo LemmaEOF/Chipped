@@ -2,8 +2,26 @@
   "replace": false,
   "values": [
     "#chipped:stone",
-    "#chipped:granite",
+    "#chipped:andesite",
     "#chipped:diorite",
-    "#chipped:andesite"
+    "#chipped:granite",
+    "#chipped:basalt",
+    "#chipped:mossy_stone_bricks",
+    "#chipped:bricks",
+    "#chipped:clay",
+    "#chipped:dark_prismarine",
+    "#chipped:prismarine",
+    "#chipped:gilded_blackstone",
+    "#chipped:coal_block",
+    "#chipped:redstone_block",
+    "#chipped:lodestone",
+    "#chipped:magma_block",
+    "#chipped:purpur_block",
+    "#chipped:quartz_block",
+    "#chipped:red_nether_bricks",
+    "#chipped:red_sandstone",
+    "#chipped:sandstone",
+    "#chipped:smooth_stone",
+    "#chipped:nether_bricks"
   ]
 }

@@ -28,7 +28,7 @@ public class ChippedItemModelProvider extends ItemModelProvider {
 		for (int i = 0; i < blocks.size(); ++i) {
 			RegistryObject<IronBarsBlock> glassPane = blocks.get(i);
 			String block = glassPane.getId().getPath();
-			withExistingParent(block, mcLoc("generated")).texture("layer0", modLoc("block/" + GLASSES + "/" + GLASSES.getBlocks().get(i).getId().getPath()));
+			withExistingParent(block, mcLoc("generated")).texture("layer0", modLoc("block/" + GLASSES.getId() + "/" + GLASSES.getBlocks().get(i).getId().getPath()));
 		}
 
 		for (int id = 0; id < 16; id++) {
@@ -37,7 +37,7 @@ public class ChippedItemModelProvider extends ItemModelProvider {
 			List<RegistryObject<StainedGlassBlock>> glasses = STAINED_GLASSES.get(color).getBlocks();
 			for (int i = 0; i < glassPanes.size(); ++i) {
 				RegistryObject<StainedGlassPaneBlock> glass = glassPanes.get(i);
-				withExistingParent(glass.getId().getPath(), mcLoc("generated")).texture("layer0", modLoc("block/" + STAINED_GLASSES.get(color) + "/" + glasses.get(i).getId().getPath()));
+				withExistingParent(glass.getId().getPath(), mcLoc("generated")).texture("layer0", modLoc("block/" + STAINED_GLASSES.get(color).getId() + "/" + glasses.get(i).getId().getPath()));
 			}
 		}
 
@@ -102,7 +102,7 @@ public class ChippedItemModelProvider extends ItemModelProvider {
 		}
 
 		for (RegistryObject<WebBlock> block : COBWEBS.getBlocks()) {
-			withExistingParent(block.getId().getPath(), mcLoc("generated")).texture("layer0", modLoc("block/" + COBWEBS + "/" + block.getId().getPath()));
+			withExistingParent(block.getId().getPath(), mcLoc("generated")).texture("layer0", modLoc("block/" + COBWEBS.getId() + "/" + block.getId().getPath()));
 		}
 
 		applyDefault(
@@ -133,7 +133,7 @@ public class ChippedItemModelProvider extends ItemModelProvider {
 		for (int i =  ChippedBlocks.specialPumpkinList.length + 4; i <= pumpkin_blocks.size(); i++) {
 			RegistryObject<PumpkinBlock> block = pumpkin_blocks.get(i - 1);
 			String name = block.getId().getPath();
-			withExistingParent(name, modLoc("block/" + PUMPKINS + "s/" + name));
+			withExistingParent(name, modLoc("block/" + PUMPKINS.getId() + "s/" + name));
 		}
 	}
 

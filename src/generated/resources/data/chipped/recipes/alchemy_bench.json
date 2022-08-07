@@ -1,10 +1,14 @@
 {
   "type": "chipped:alchemy_bench",
   "tags": [
-    "chipped:obsidian",
-    "chipped:crying_obsidian",
-    "chipped:glowstone",
-    "chipped:sea_lantern",
-    "chipped:soul_sand"
+    "chipped:chipped:lapis_block",
+    "chipped:chipped:coal_block",
+    "chipped:chipped:lodestone",
+    "chipped:chipped:magma_block",
+    "chipped:chipped:obsidian",
+    "chipped:chipped:crying_obsidian",
+    "chipped:chipped:glowstone",
+    "chipped:chipped:sea_lantern",
+    "chipped:chipped:soul_sand"
   ]
 }

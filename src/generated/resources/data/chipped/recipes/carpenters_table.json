@@ -1,14 +1,14 @@
 {
   "type": "chipped:carpenters_table",
   "tags": [
-    "chipped:oak_planks",
-    "chipped:birch_planks",
-    "chipped:spruce_planks",
-    "chipped:jungle_planks",
-    "chipped:acacia_planks",
-    "chipped:dark_oak_planks",
-    "chipped:warped_planks",
-    "chipped:crimson_planks",
-    "chipped:torch"
+    "chipped:chipped:oak_planks",
+    "chipped:chipped:birch_planks",
+    "chipped:chipped:spruce_planks",
+    "chipped:chipped:jungle_planks",
+    "chipped:chipped:acacia_planks",
+    "chipped:chipped:dark_oak_planks",
+    "chipped:chipped:warped_planks",
+    "chipped:chipped:crimson_planks",
+    "chipped:chipped:torch"
   ]
 }

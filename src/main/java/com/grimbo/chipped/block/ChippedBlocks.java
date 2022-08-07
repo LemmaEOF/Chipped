@@ -152,8 +152,8 @@ public class ChippedBlocks {
         // Register Glasses and Stained Glasses
         final BlockBehaviour.Properties GLASS_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS);
         final BlockBehaviour.Properties GLASS_PANE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.GLASS_PANE);
-        registerBlocks(BenchType.GLASSBLOWER, GLASSES, () -> new GlassBlock(GLASS_PROPERTIES), 14);
-        registerBlocks(BenchType.GLASSBLOWER, GLASS_PANES, () -> new IronBarsBlock(GLASS_PANE_PROPERTIES), 14);
+        registerBlocks(BenchType.GLASSBLOWER, GLASSES, () -> new GlassBlock(GLASS_PROPERTIES), 13);
+        registerBlocks(BenchType.GLASSBLOWER, GLASS_PANES, () -> new IronBarsBlock(GLASS_PANE_PROPERTIES), 13);
 
         for (ChippedWoodType type : ChippedWoodType.VALUES) {
             registerBlocks(BenchType.GLASSBLOWER, GLASSES, type + "_wood_glass", () -> new GlassBlock(GLASS_PROPERTIES), 6);

@@ -38,7 +38,7 @@ public class ChippedBlockStateProvider extends BlockStateProvider {
         );
 
         registerGlassPanes(GLASS_PANES, "glass", "glass_pane_1_top", 1, 6);
-        registerGlassPanes(GLASS_PANES, "glass", "glass_pane_2_top", 7, 14);
+        registerGlassPanes(GLASS_PANES, "glass", "glass_pane_2_top", 7, 13);
 
         for (int id = 0; id < 16; id++) {
             DyeColor color = DyeColor.byId(id);
@@ -70,7 +70,7 @@ public class ChippedBlockStateProvider extends BlockStateProvider {
 
         for (RegistryObject<HayBlock> block : HAY_BLOCKS.getBlocks()) {
             String name = block.getId().getPath();
-            axisBlock(block.get(), modLoc("block/" + HAY_BLOCKS + "/" + name));
+            axisBlock(block.get(), modLoc("block/" + HAY_BLOCKS.getId() + "/" + name));
         }
 
         // Dried Kelp Block
@@ -80,16 +80,16 @@ public class ChippedBlockStateProvider extends BlockStateProvider {
                 RegistryObject<Block> block = dried_kelp_blocks.get(i - 1);
                 String name = block.getId().getPath();
                 if (i == 12) {
-                    simpleBlock(block.get(), models().cubeAll(name, modLoc("block/" + DRIED_KELP_BLOCKS + "/" + name)));
+                    simpleBlock(block.get(), models().cubeAll(name, modLoc("block/" + DRIED_KELP_BLOCKS.getId() + "/" + name)));
                 } else {
-                    simpleBlock(block.get(), models().cubeBottomTop(name, modLoc("block/" + DRIED_KELP_BLOCKS + "/" + name + "_side"), modLoc("block/" + DRIED_KELP_BLOCKS + "/" + name + "_top"), modLoc("block/" + DRIED_KELP_BLOCKS + "/" + name + "_top")));
+                    simpleBlock(block.get(), models().cubeBottomTop(name, modLoc("block/" + DRIED_KELP_BLOCKS.getId() + "/" + name + "_side"), modLoc("block/" + DRIED_KELP_BLOCKS.getId() + "/" + name + "_top"), modLoc("block/" + DRIED_KELP_BLOCKS.getId() + "/" + name + "_top")));
                 }
             }
         }
 
         for (RegistryObject<MelonBlock> block : MELONS.getBlocks()) {
             String name = block.getId().getPath();
-            simpleBlock(block.get(), models().cubeColumn(name, modLoc("block/" + MELONS + "/" + name + "_side"), modLoc("block/" + MELONS + "/" + name + "_top")));
+            simpleBlock(block.get(), models().cubeColumn(name, modLoc("block/" + MELONS.getId() + "/" + name + "_side"), modLoc("block/" + MELONS.getId() + "/" + name + "_top")));
         }
 
         // Pumpkins
@@ -97,54 +97,54 @@ public class ChippedBlockStateProvider extends BlockStateProvider {
         for (int i = 1; i <= ChippedBlocks.specialPumpkinList.length; i++) {
             RegistryObject<PumpkinBlock> block = pumpkin_blocks.get(i - 1);
             String name = block.getId().getPath();
-            simpleBlock(block.get(), models().cubeColumn(name, modLoc("block/" + PUMPKINS + "/" + name + "_side"), modLoc("block/" + PUMPKINS + "/" + name + "_top")));
+            simpleBlock(block.get(), models().cubeColumn(name, modLoc("block/" + PUMPKINS.getId() + "/" + name + "_side"), modLoc("block/" + PUMPKINS.getId() + "/" + name + "_top")));
         }
 
         // Rest are done manually
         for (int i = ChippedBlocks.specialPumpkinList.length + 1; i <= ChippedBlocks.specialPumpkinList.length + 3; i++) {
             RegistryObject<PumpkinBlock> block = pumpkin_blocks.get(i - 1);
             String name = block.getId().getPath();
-            simpleBlock(block.get(), models().cubeBottomTop(name, modLoc("block/" + PUMPKINS + "/" + name + "_side"), modLoc("block/" + PUMPKINS + "/" + name + "_bottom"), modLoc("block/" + PUMPKINS + "/" + name + "_top")));
+            simpleBlock(block.get(), models().cubeBottomTop(name, modLoc("block/" + PUMPKINS.getId() + "/" + name + "_side"), modLoc("block/" + PUMPKINS.getId() + "/" + name + "_bottom"), modLoc("block/" + PUMPKINS.getId() + "/" + name + "_top")));
         }
 
         for (RegistryObject<MushroomBlock> block : BROWN_MUSHROOMS.getBlocks()) {
             String name = block.getId().getPath();
-            simpleBlock(block.get(), models().cross(name, modLoc("block/" + BROWN_MUSHROOMS + "/" + name)));
+            simpleBlock(block.get(), models().cross(name, modLoc("block/" + BROWN_MUSHROOMS.getId() + "/" + name)));
         }
 
         for (RegistryObject<MushroomBlock> block : RED_MUSHROOMS.getBlocks()) {
             String name = block.getId().getPath();
-            simpleBlock(block.get(), models().cross(name, modLoc("block/" + RED_MUSHROOMS + "/" + name)));
+            simpleBlock(block.get(), models().cross(name, modLoc("block/" + RED_MUSHROOMS.getId() + "/" + name)));
         }
 
         for (RegistryObject<MushroomBlock> block : WARPED_FUNGUS.getBlocks()) {
             String name = block.getId().getPath();
-            simpleBlock(block.get(), models().cross(name, modLoc("block/" + WARPED_FUNGUS + "/" + name)));
+            simpleBlock(block.get(), models().cross(name, modLoc("block/" + WARPED_FUNGUS.getId() + "/" + name)));
         }
 
         for (RegistryObject<MushroomBlock> block : CRIMSON_FUNGUS.getBlocks()) {
             String name = block.getId().getPath();
-            simpleBlock(block.get(), models().cross(name, modLoc("block/" + CRIMSON_FUNGUS + "/" + name)));
+            simpleBlock(block.get(), models().cross(name, modLoc("block/" + CRIMSON_FUNGUS.getId() + "/" + name)));
         }
 
         for (RegistryObject<RootsBlock> block : WARPED_ROOTS.getBlocks()) {
             String name = block.getId().getPath();
-            simpleBlock(block.get(), models().cross(name, modLoc("block/" + WARPED_ROOTS + "/" + name)));
+            simpleBlock(block.get(), models().cross(name, modLoc("block/" + WARPED_ROOTS.getId() + "/" + name)));
         }
 
         for (RegistryObject<RootsBlock> block : CRIMSON_ROOTS.getBlocks()) {
             String name = block.getId().getPath();
-            simpleBlock(block.get(), models().cross(name, modLoc("block/" + CRIMSON_ROOTS + "/" + name)));
+            simpleBlock(block.get(), models().cross(name, modLoc("block/" + CRIMSON_ROOTS.getId() + "/" + name)));
         }
 
         for (RegistryObject<NetherSproutsBlock> block : NETHER_SPROUTS.getBlocks()) {
             String name = block.getId().getPath();
-            simpleBlock(block.get(), models().cross(name, modLoc("block/" + NETHER_SPROUTS + "/" + name)));
+            simpleBlock(block.get(), models().cross(name, modLoc("block/" + NETHER_SPROUTS.getId() + "/" + name)));
         }
 
         for (RegistryObject<WebBlock> block : COBWEBS.getBlocks()) {
             String name = block.getId().getPath();
-            simpleBlock(block.get(), models().cross(name, modLoc("block/" + COBWEBS + "/" + name)));
+            simpleBlock(block.get(), models().cross(name, modLoc("block/" + COBWEBS.getId() + "/" + name)));
         }
 
         for (RegistryObject<Block> block : LANTERNS) {
@@ -256,7 +256,7 @@ public class ChippedBlockStateProvider extends BlockStateProvider {
 
     private <T extends Block> void createCubeFromList(ChippedBlockType<?> blockList) {
         for (RegistryObject<? extends Block> block : blockList) {
-            simpleBlock(block.get(), models().cubeAll(block.getId().getPath(), modLoc("block/" + blockList + "/" + block.getId().getPath())));
+            simpleBlock(block.get(), models().cubeAll(block.getId().getPath(), modLoc("block/" + blockList.getId() + "/" + block.getId().getPath())));
         }
     }
 
