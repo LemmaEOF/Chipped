@@ -93,7 +93,7 @@ public class ChippedItemModelProvider extends ItemModelProvider {
 			withExistingParent("nether_sprouts_" + i, mcLoc("generated")).texture("layer0", modLoc("item/nether_sprouts/nether_sprouts_" + i));
 		}
 
-		for (int i = 1; i <= 6; i++) {
+		for (int i = 1; i <= 22; i++) {
 			withExistingParent("lily_pad_" + i, mcLoc("generated")).texture("layer0", modLoc("item/lily_pad/lily_pad_" + i));
 		}
 
@@ -112,7 +112,8 @@ public class ChippedItemModelProvider extends ItemModelProvider {
 				WARPED_WART_BLOCK, NETHER_WART_BLOCK, SOUL_SANDS, DRIED_KELP_BLOCKS, MOSSY_COBBLESTONE, ANDESITE,
 				DIORITE, BASALT, MOSSY_STONE_BRICKS, BRICKS, DARK_PRISMARINE, GRANITE, LAPIS_BLOCK, COAL_BLOCK, LODESTONE,
 				MAGMA_BLOCK, NETHER_BRICKS, PRISMARINE, PURPUR_BLOCK, QUARTZ_BLOCK, RED_NETHER_BRICKS, RED_SANDSTONE, REDSTONE_BLOCK, SANDSTONE,
-				SMOOTH_STONE
+				SMOOTH_STONE, AMETHYST_BLOCK, CALCITE, DRIPSTONE_BLOCK, TUFF, DEEPSLATE, RAW_COPPER_BLOCK, RAW_GOLD_BLOCK,
+				RAW_IRON_BLOCK, GRAVEL, SAND, BLUE_ICE, ICE, PACKED_ICE, DIAMOND_BLOCK, EMERALD_BLOCK, GOLD_BLOCK, IRON_BLOCK, NETHERITE_BLOCK
 		);
 
 		applyDefault(PLANKS.values());
@@ -121,6 +122,7 @@ public class ChippedItemModelProvider extends ItemModelProvider {
 		applyDefault(STAINED_GLASSES.values());
 		applyDefault(WOOL.values());
 		applyDefault(CARPETS.values());
+		applyDefault(GLAZED_TERRACOTTAS.values());
 
 		//Special Pumpkins + First 3
 		List<RegistryObject<PumpkinBlock>> pumpkin_blocks = PUMPKINS.getBlocks();

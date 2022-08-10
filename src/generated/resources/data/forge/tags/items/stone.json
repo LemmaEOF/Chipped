@@ -22,6 +22,22 @@
     "#chipped:red_sandstone",
     "#chipped:sandstone",
     "#chipped:smooth_stone",
-    "#chipped:nether_bricks"
+    "#chipped:nether_bricks",
+    "#chipped:amethyst_block",
+    "#chipped:calcite",
+    "#chipped:dripstone_block",
+    "#chipped:tuff",
+    "#chipped:deepslate",
+    "#chipped:raw_iron_block",
+    "#chipped:raw_copper_block",
+    "#chipped:raw_gold_block",
+    "#chipped:blue_ice",
+    "#chipped:ice",
+    "#chipped:packed_ice",
+    "#chipped:diamond_block",
+    "#chipped:emerald_block",
+    "#chipped:gold_block",
+    "#chipped:iron_block",
+    "#chipped:netherite_block"
   ]
 }

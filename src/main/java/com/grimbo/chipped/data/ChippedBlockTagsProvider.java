@@ -95,11 +95,32 @@ public class ChippedBlockTagsProvider extends BlockTagsProvider {
 				.addTag(RED_SANDSTONE.getBlockTag())
 				.addTag(SANDSTONE.getBlockTag())
 				.addTag(SMOOTH_STONE.getBlockTag())
-				.addTag(NETHER_BRICKS.getBlockTag());
+				.addTag(NETHER_BRICKS.getBlockTag())
+				.addTag(AMETHYST_BLOCK.getBlockTag())
+				.addTag(CALCITE.getBlockTag())
+				.addTag(DRIPSTONE_BLOCK.getBlockTag())
+				.addTag(TUFF.getBlockTag())
+				.addTag(DEEPSLATE.getBlockTag())
+				.addTag(RAW_IRON_BLOCK.getBlockTag())
+				.addTag(RAW_COPPER_BLOCK.getBlockTag())
+				.addTag(RAW_GOLD_BLOCK.getBlockTag())
+				.addTag(PACKED_ICE.getBlockTag())
+				.addTag(ICE.getBlockTag())
+				.addTag(BLUE_ICE.getBlockTag())
+				.addTag(DIAMOND_BLOCK.getBlockTag())
+				.addTag(EMERALD_BLOCK.getBlockTag())
+				.addTag(GOLD_BLOCK.getBlockTag())
+				.addTag(IRON_BLOCK.getBlockTag())
+				.addTag(NETHERITE_BLOCK.getBlockTag());
 
 		tag(Tags.Blocks.COBBLESTONE).addTag(COBBLESTONE.getBlockTag());
+		tag(Tags.Blocks.SAND).addTag(SAND.getBlockTag());
+		tag(Tags.Blocks.GRAVEL).addTag(GRAVEL.getBlockTag());
 
 		tag(Tags.Blocks.END_STONES).addTag(END_STONE.getBlockTag());
+
+
+
 
 		tag(Tags.Blocks.GLASS).addTag(GLASSES.getBlockTag());
 		tag(Tags.Blocks.GLASS_COLORLESS).addTag(GLASSES.getBlockTag());
@@ -116,6 +137,8 @@ public class ChippedBlockTagsProvider extends BlockTagsProvider {
 
 			tag(BlockTags.create(new ResourceLocation("forge", "terracotta"))).addTag(TERRACOTTAS.get(color).getBlockTag());
 			tag(BlockTags.create(new ResourceLocation("forge", "terracotta/"+color))).addTag(TERRACOTTAS.get(color).getBlockTag());
+			tag(BlockTags.create(new ResourceLocation("forge", "glazed_terracotta"))).addTag(GLAZED_TERRACOTTAS.get(color).getBlockTag());
+			tag(BlockTags.create(new ResourceLocation("forge", "glazed_terracotta/"+color))).addTag(GLAZED_TERRACOTTAS.get(color).getBlockTag());
 		}
 
 		tag(Tags.Blocks.NETHERRACK).addTag(NETHERRACK.getBlockTag());

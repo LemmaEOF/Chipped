@@ -125,18 +125,38 @@ public class ChippedBlocks {
         registerVanillaBlocks(BenchType.ALCHEMY, LODESTONE, 69);
         registerVanillaBlocks(BenchType.ALCHEMY, MAGMA_BLOCK, 69);
         registerVanillaBlocks(BenchType.ALCHEMY, OBSIDIAN, 69);
+        registerVanillaBlocks(BenchType.ALCHEMY, AMETHYST_BLOCK, 61);
+        registerVanillaBlocks(BenchType.MASON, CALCITE, 61);
+        registerVanillaBlocks(BenchType.MASON, DRIPSTONE_BLOCK, 61);
+        registerVanillaBlocks(BenchType.MASON, TUFF, 61);
+        registerVanillaBlocks(BenchType.MASON, DEEPSLATE, 61);
+        registerVanillaBlocks(BenchType.ALCHEMY, RAW_COPPER_BLOCK, 61);
+        registerVanillaBlocks(BenchType.ALCHEMY, RAW_IRON_BLOCK, 61);
+        registerVanillaBlocks(BenchType.ALCHEMY, RAW_GOLD_BLOCK, 61);
+        registerVanillaBlocks(BenchType.ALCHEMY, DIAMOND_BLOCK, 12);
+        registerVanillaBlocks(BenchType.ALCHEMY, EMERALD_BLOCK, 12);
+        registerVanillaBlocks(BenchType.ALCHEMY, GOLD_BLOCK, 12);
+        registerVanillaBlocks(BenchType.ALCHEMY, IRON_BLOCK, 12);
+        registerVanillaBlocks(BenchType.ALCHEMY, NETHERITE_BLOCK, 12);
+
         final BlockBehaviour.Properties CRYING_OBSIDIAN_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.CRYING_OBSIDIAN);
         registerBlocks(BenchType.ALCHEMY, CRYING_OBSIDIAN, () -> new CryingObsidianBlock(CRYING_OBSIDIAN_PROPERTIES), 69);
 
         for (int id = 0; id < 16; ++id) {
             DyeColor color = DyeColor.byId(id);
-            registerVanillaBlocks(BenchType.MASON, TERRACOTTAS.computeIfAbsent(color, k -> new ChippedBlockType<>(k + "_terracotta")), 18);
-            registerVanillaBlocks(BenchType.MASON, CONCRETES.computeIfAbsent(color, k -> new ChippedBlockType<>(k + "_concrete")), 18);
+            registerVanillaBlocks(BenchType.MASON, TERRACOTTAS.computeIfAbsent(color, k -> new ChippedBlockType<>(k + "_terracotta")), 66);
+            registerVanillaBlocks(BenchType.MASON, CONCRETES.computeIfAbsent(color, k -> new ChippedBlockType<>(k + "_concrete")), 21);
+            registerVanillaBlocks(BenchType.MASON, GLAZED_TERRACOTTAS.computeIfAbsent(color, k -> new ChippedBlockType<>(k + "_glazed_terracotta")), 11);
         }
 
         registerVanillaBlocks(BenchType.ALCHEMY, Blocks.GLOWSTONE, GLOWSTONES, 20);
         registerVanillaBlocks(BenchType.ALCHEMY, Blocks.SEA_LANTERN, SEA_LANTERNS, 16);
         registerVanillaBlocks(BenchType.BOTANIST, Blocks.SHROOMLIGHT, SHROOMLIGHTS, 16);
+
+        registerVanillaBlocks(BenchType.BOTANIST, BLUE_ICE, 69);
+        final BlockBehaviour.Properties ICE_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.ICE);
+        registerBlocks(BenchType.BOTANIST, ICE, () -> new IceBlock(ICE_PROPERTIES), 67);
+        registerVanillaBlocks(BenchType.BOTANIST, PACKED_ICE, 69);
 
         final BlockBehaviour.Properties REDSTONE_LAMP_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP);
         registerBlocks(BenchType.MECHANIST, REDSTONE_LAMPS, () -> new RedstoneLampBlock(REDSTONE_LAMP_PROPERTIES), 18);
@@ -156,23 +176,23 @@ public class ChippedBlocks {
         registerBlocks(BenchType.GLASSBLOWER, GLASS_PANES, () -> new IronBarsBlock(GLASS_PANE_PROPERTIES), 13);
 
         for (ChippedWoodType type : ChippedWoodType.VALUES) {
-            registerBlocks(BenchType.GLASSBLOWER, GLASSES, type + "_wood_glass", () -> new GlassBlock(GLASS_PROPERTIES), 6);
-            registerBlocks(BenchType.GLASSBLOWER, GLASS_PANES, type + "_wood_glass_pane", () -> new IronBarsBlock(GLASS_PANE_PROPERTIES), 6);
+            registerBlocks(BenchType.GLASSBLOWER, GLASSES, type + "_wood_glass", () -> new GlassBlock(GLASS_PROPERTIES), 11);
+            registerBlocks(BenchType.GLASSBLOWER, GLASS_PANES, type + "_wood_glass_pane", () -> new IronBarsBlock(GLASS_PANE_PROPERTIES), 11);
         }
 
         for (int id = 0; id < 16; ++id) {
             DyeColor color = DyeColor.byId(id);
-            registerBlocks(BenchType.GLASSBLOWER, STAINED_GLASSES.computeIfAbsent(color, k -> new ChippedBlockType<>(k + "_stained_glass")), () -> new StainedGlassBlock(color, GLASS_PROPERTIES), 8);
-            registerBlocks(BenchType.GLASSBLOWER, STAINED_GLASS_PANES.computeIfAbsent(color, k -> new ChippedBlockType<>(k + "_stained_glass_pane")), () -> new StainedGlassPaneBlock(color, GLASS_PANE_PROPERTIES), 8);
+            registerBlocks(BenchType.GLASSBLOWER, STAINED_GLASSES.computeIfAbsent(color, k -> new ChippedBlockType<>(k + "_stained_glass")), () -> new StainedGlassBlock(color, GLASS_PROPERTIES), 10);
+            registerBlocks(BenchType.GLASSBLOWER, STAINED_GLASS_PANES.computeIfAbsent(color, k -> new ChippedBlockType<>(k + "_stained_glass_pane")), () -> new StainedGlassPaneBlock(color, GLASS_PANE_PROPERTIES), 10);
         }
 
         // Register Misc
-        registerVanillaBlocks(BenchType.MASON, Blocks.CLAY, CLAYS, 19);
+        registerVanillaBlocks(BenchType.MASON, Blocks.CLAY, CLAYS, 62);
         registerVanillaBlocks(BenchType.BOTANIST, Blocks.DRIED_KELP_BLOCK, DRIED_KELP_BLOCKS, 12);
 
         final BlockBehaviour.Properties woodProperties = BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD);
         for (ChippedWoodType type : ChippedWoodType.VALUES) {
-            registerBlocks(BenchType.CARPENTERS, PLANKS.computeIfAbsent(type, k -> new ChippedBlockType<>(k + "_planks")), () -> new Block(woodProperties), 18);
+            registerBlocks(BenchType.CARPENTERS, PLANKS.computeIfAbsent(type, k -> new ChippedBlockType<>(k + "_planks")), () -> new Block(woodProperties), 41);
         }
 
         final BlockBehaviour.Properties hayProperties = BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK);
@@ -181,6 +201,10 @@ public class ChippedBlocks {
         registerBlocks(BenchType.BOTANIST, MELONS, () -> new MelonBlock(melonProperties), 10);
         final BlockBehaviour.Properties vineProperties = BlockBehaviour.Properties.copy(Blocks.VINE);
         registerBlocks(BenchType.BOTANIST, VINES, () -> new VineBlock(vineProperties), 17);
+        final BlockBehaviour.Properties gravelProperties = BlockBehaviour.Properties.copy(Blocks.GRAVEL);
+        registerBlocks(BenchType.BOTANIST, GRAVEL, () -> new GravelBlock(gravelProperties), 7);
+        final BlockBehaviour.Properties sandProperties = BlockBehaviour.Properties.copy(Blocks.SAND);
+        registerBlocks(BenchType.BOTANIST, SAND, () -> new SandBlock(1, sandProperties), 12);
 
         final BlockBehaviour.Properties brownMushroomProperties = BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM);
         registerBlocks(BenchType.BOTANIST, BROWN_MUSHROOMS, () -> new MushroomBlock(brownMushroomProperties, () -> TreeFeatures.HUGE_BROWN_MUSHROOM), 15);
@@ -214,7 +238,7 @@ public class ChippedBlocks {
         registerBlocks(BenchType.ALCHEMY, SOUL_SANDS, () -> new SoulSandBlock(soulSandProperties), 11);
 
         final BlockBehaviour.Properties lilyPadProperties = BlockBehaviour.Properties.copy(Blocks.LILY_PAD);
-        for (int i = 1; i <= 6; i++) {
+        for (int i = 1; i <= 22; i++) {
             String name = LILY_PAD.getId() + "_" + i;
             RegistryObject<WaterlilyBlock> lilyPad = BLOCKS.register(name, () -> new WaterlilyBlock(lilyPadProperties) {
                 @Override

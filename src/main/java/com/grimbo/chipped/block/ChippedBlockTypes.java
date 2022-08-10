@@ -19,6 +19,7 @@ public class ChippedBlockTypes {
     public static final EnumMap<DyeColor, ChippedBlockType<WoolCarpetBlock>> CARPETS = new EnumMap<>(DyeColor.class);
 
     public static final EnumMap<DyeColor, ChippedBlockType<Block>> TERRACOTTAS = new EnumMap<>(DyeColor.class);
+    public static final EnumMap<DyeColor, ChippedBlockType<Block>> GLAZED_TERRACOTTAS = new EnumMap<>(DyeColor.class);
     public static final EnumMap<DyeColor, ChippedBlockType<Block>> CONCRETES = new EnumMap<>(DyeColor.class);
 
     public static final ChippedBlockType<VineBlock> VINES = new ChippedBlockType<>("vine");
@@ -43,6 +44,12 @@ public class ChippedBlockTypes {
     public static final ChippedBlockType<RootsBlock> WARPED_ROOTS = new ChippedBlockType<>("warped_roots");
     public static final ChippedBlockType<RootsBlock> CRIMSON_ROOTS = new ChippedBlockType<>("crimson_roots");
     public static final ChippedBlockType<NetherSproutsBlock> NETHER_SPROUTS = new ChippedBlockType<>("nether_sprouts");
+    public static final ChippedBlockType<GravelBlock> GRAVEL = new ChippedBlockType<>("gravel");
+    public static final ChippedBlockType<SandBlock> SAND = new ChippedBlockType<>("sand");
+    public static final ChippedBlockType<Block> BLUE_ICE = new ChippedBlockType<>("blue_ice");
+    public static final ChippedBlockType<Block> ICE = new ChippedBlockType<>("ice");
+    public static final ChippedBlockType<Block> PACKED_ICE = new ChippedBlockType<>("packed_ice");
+
 
     public static final ChippedBlockType<HugeMushroomBlock> BROWN_MUSHROOM_BLOCK = new ChippedBlockType<>("brown_mushroom_block");
     public static final ChippedBlockType<HugeMushroomBlock> RED_MUSHROOM_BLOCK = new ChippedBlockType<>("red_mushroom_block");
@@ -89,6 +96,23 @@ public class ChippedBlockTypes {
     public static final ChippedBlockType<Block> GLOWSTONES = new ChippedBlockType<>("glowstone");
     public static final ChippedBlockType<Block> SEA_LANTERNS = new ChippedBlockType<>("sea_lantern");
     public static final ChippedBlockType<Block> SHROOMLIGHTS = new ChippedBlockType<>("shroomlight");
+    public static final ChippedBlockType<Block> AMETHYST_BLOCK = new ChippedBlockType<>("amethyst_block");
+    public static final ChippedBlockType<Block> CALCITE = new ChippedBlockType<>("calcite");
+    public static final ChippedBlockType<Block> DRIPSTONE_BLOCK = new ChippedBlockType<>("dripstone_block");
+    public static final ChippedBlockType<Block> TUFF = new ChippedBlockType<>("tuff");
+    public static final ChippedBlockType<Block> DEEPSLATE = new ChippedBlockType<>("deepslate");
+    public static final ChippedBlockType<Block> RAW_COPPER_BLOCK = new ChippedBlockType<>("raw_copper_block");
+    public static final ChippedBlockType<Block> RAW_GOLD_BLOCK = new ChippedBlockType<>("raw_gold_block");
+    public static final ChippedBlockType<Block> RAW_IRON_BLOCK = new ChippedBlockType<>("raw_iron_block");
+
+
+    public static final ChippedBlockType<Block> DIAMOND_BLOCK = new ChippedBlockType<>("diamond_block");
+    public static final ChippedBlockType<Block> EMERALD_BLOCK = new ChippedBlockType<>("emerald_block");
+    public static final ChippedBlockType<Block> GOLD_BLOCK = new ChippedBlockType<>("gold_block");
+    public static final ChippedBlockType<Block> IRON_BLOCK = new ChippedBlockType<>("iron_block");
+    public static final ChippedBlockType<Block> NETHERITE_BLOCK = new ChippedBlockType<>("netherite_block");
+
+
 
     public static final ChippedBlockType<RedstoneLampBlock> REDSTONE_LAMPS = new ChippedBlockType<>("redstone_lamp");
 

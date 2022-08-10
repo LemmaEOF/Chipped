@@ -34,7 +34,8 @@ public class ChippedBlockStateProvider extends BlockStateProvider {
                 BROWN_MUSHROOM_BLOCK, RED_MUSHROOM_BLOCK, WARPED_WART_BLOCK, NETHER_WART_BLOCK, SOUL_SANDS, MOSSY_COBBLESTONE, ANDESITE,
                 DIORITE, BASALT, MOSSY_STONE_BRICKS, BRICKS, DARK_PRISMARINE, GRANITE, LAPIS_BLOCK,
                 COAL_BLOCK, LODESTONE, MAGMA_BLOCK, NETHER_BRICKS, PRISMARINE, PURPUR_BLOCK, QUARTZ_BLOCK, RED_NETHER_BRICKS,
-                RED_SANDSTONE, REDSTONE_BLOCK, SANDSTONE, SMOOTH_STONE
+                RED_SANDSTONE, REDSTONE_BLOCK, SANDSTONE, SMOOTH_STONE, AMETHYST_BLOCK, CALCITE, DRIPSTONE_BLOCK, TUFF, DEEPSLATE, RAW_COPPER_BLOCK,
+                RAW_IRON_BLOCK, RAW_GOLD_BLOCK, GRAVEL, SAND, PACKED_ICE, BLUE_ICE, ICE, DIAMOND_BLOCK, EMERALD_BLOCK, GOLD_BLOCK, IRON_BLOCK, NETHERITE_BLOCK
         );
 
         registerGlassPanes(GLASS_PANES, "glass", "glass_pane_1_top", 1, 6);
@@ -46,6 +47,7 @@ public class ChippedBlockStateProvider extends BlockStateProvider {
             createCubeFromList(CONCRETES.get(color));
             createCubeFromList(WOOL.get(color));
             createCubeFromList(STAINED_GLASSES.get(color));
+            createCubeFromList(GLAZED_TERRACOTTAS.get(color));
 
             List<RegistryObject<WoolCarpetBlock>> blocks = CARPETS.get(color).getBlocks();
             for (int i = 0; i < blocks.size(); ++i) {
