@@ -38,6 +38,7 @@
     "#chipped:emerald_block",
     "#chipped:gold_block",
     "#chipped:iron_block",
-    "#chipped:netherite_block"
+    "#chipped:netherite_block",
+    "#chipped:ancient_debris"
   ]
 }

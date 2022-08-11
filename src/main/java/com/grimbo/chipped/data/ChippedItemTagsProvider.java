@@ -90,7 +90,8 @@ public class ChippedItemTagsProvider extends ItemTagsProvider {
 				.addTag(EMERALD_BLOCK.getItemTag())
 				.addTag(GOLD_BLOCK.getItemTag())
 				.addTag(IRON_BLOCK.getItemTag())
-				.addTag(NETHERITE_BLOCK.getItemTag());
+				.addTag(NETHERITE_BLOCK.getItemTag())
+				.addTag(ANCIENT_DEBRIS.getItemTag());
 
 		tag(Tags.Items.COBBLESTONE).addTag(COBBLESTONE.getItemTag());
 		tag(Tags.Items.END_STONES).addTag(END_STONE.getItemTag());

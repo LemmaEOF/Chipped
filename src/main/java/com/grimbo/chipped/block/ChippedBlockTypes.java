@@ -104,6 +104,7 @@ public class ChippedBlockTypes {
     public static final ChippedBlockType<Block> RAW_COPPER_BLOCK = new ChippedBlockType<>("raw_copper_block");
     public static final ChippedBlockType<Block> RAW_GOLD_BLOCK = new ChippedBlockType<>("raw_gold_block");
     public static final ChippedBlockType<Block> RAW_IRON_BLOCK = new ChippedBlockType<>("raw_iron_block");
+    public static final ChippedBlockType<Block> ANCIENT_DEBRIS = new ChippedBlockType<>("ancient_debris");
 
 
     public static final ChippedBlockType<Block> DIAMOND_BLOCK = new ChippedBlockType<>("diamond_block");

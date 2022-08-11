@@ -27,8 +27,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
 
 import static com.grimbo.chipped.block.ChippedBlockTypes.*;
 
@@ -138,6 +137,7 @@ public class ChippedBlocks {
         registerVanillaBlocks(BenchType.ALCHEMY, GOLD_BLOCK, 12);
         registerVanillaBlocks(BenchType.ALCHEMY, IRON_BLOCK, 12);
         registerVanillaBlocks(BenchType.ALCHEMY, NETHERITE_BLOCK, 12);
+        registerVanillaBlocks(BenchType.ALCHEMY, ANCIENT_DEBRIS, 69);
 
         final BlockBehaviour.Properties CRYING_OBSIDIAN_PROPERTIES = BlockBehaviour.Properties.copy(Blocks.CRYING_OBSIDIAN);
         registerBlocks(BenchType.ALCHEMY, CRYING_OBSIDIAN, () -> new CryingObsidianBlock(CRYING_OBSIDIAN_PROPERTIES), 69);

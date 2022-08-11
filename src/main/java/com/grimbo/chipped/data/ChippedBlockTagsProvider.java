@@ -111,7 +111,8 @@ public class ChippedBlockTagsProvider extends BlockTagsProvider {
 				.addTag(EMERALD_BLOCK.getBlockTag())
 				.addTag(GOLD_BLOCK.getBlockTag())
 				.addTag(IRON_BLOCK.getBlockTag())
-				.addTag(NETHERITE_BLOCK.getBlockTag());
+				.addTag(NETHERITE_BLOCK.getBlockTag())
+				.addTag(ANCIENT_DEBRIS.getBlockTag());
 
 		tag(Tags.Blocks.COBBLESTONE).addTag(COBBLESTONE.getBlockTag());
 		tag(Tags.Blocks.SAND).addTag(SAND.getBlockTag());
