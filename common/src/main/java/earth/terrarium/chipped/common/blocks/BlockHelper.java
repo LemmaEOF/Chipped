@@ -3,10 +3,15 @@ package earth.terrarium.chipped.common.blocks;
 import earth.terrarium.chipped.api.BlockType;
 import earth.terrarium.chipped.api.DyeableEntry;
 import earth.terrarium.chipped.api.PaletteEntry;
+import earth.terrarium.chipped.common.blocks.base.ChippedBlockFactory;
+import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import org.apache.commons.lang3.NotImplementedException;
+
+import java.util.function.Supplier;
 
 public class BlockHelper {
 
@@ -55,7 +60,7 @@ public class BlockHelper {
         };
     }
 
-    public static Block createIronBars(BlockType block, PaletteEntry entry) {
+    public static Block createPane(BlockType block, PaletteEntry entry) {
         return new IronBarsBlock(block.properties().apply(entry)) {
             @Override
             public MutableComponent getName() {
@@ -95,6 +100,15 @@ public class BlockHelper {
 
     public static Block createNetherSprouts(BlockType block, PaletteEntry entry) {
         return new NetherSproutsBlock(block.properties().apply(entry)) {
+            @Override
+            public MutableComponent getName() {
+                return Component.translatable(block.translationKey(), entry.displayName());
+            }
+        };
+    }
+
+    public static ChippedBlockFactory<MushroomBlock> createHugeMushroom(Supplier<Holder<? extends ConfiguredFeature<?, ?>>> supplier) {
+        return (block, entry) ->  new MushroomBlock(block.properties().apply(entry), supplier) {
             @Override
             public MutableComponent getName() {
                 return Component.translatable(block.translationKey(), entry.displayName());
