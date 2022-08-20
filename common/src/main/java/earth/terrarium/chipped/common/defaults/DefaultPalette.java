@@ -10,7 +10,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public enum DefaultPalette implements PaletteType {
-    STONE("stone", "happy", "sad", "bricks", "tile", "urmom", "is", "so", "fat", "that", "she", "killed", "the", "sun");
+    STONE("stone", "happy", "sad", "bricks", "tile", "urmom", "is", "so", "fat", "that", "she", "killed", "the", "sun"),
+    TEST("test", "test")
+    ;
 
     private final String id;
     private final List<? extends PaletteEntry> entries;

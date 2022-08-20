@@ -107,7 +107,7 @@ public class BlockHelper {
         };
     }
 
-    public static ChippedBlockFactory<MushroomBlock> createHugeMushroom(Supplier<Holder<? extends ConfiguredFeature<?, ?>>> supplier) {
+    public static ChippedBlockFactory<MushroomBlock> createMushroom(Supplier<Holder<? extends ConfiguredFeature<?, ?>>> supplier) {
         return (block, entry) ->  new MushroomBlock(block.properties().apply(entry), supplier) {
             @Override
             public MutableComponent getName() {
