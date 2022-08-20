@@ -217,6 +217,24 @@ public class BlockHelper {
         };
     }
 
+    public static Block createMelon(BlockType block, PaletteEntry entry) {
+        return new MelonBlock(block.properties().apply(entry)) {
+            @Override
+            public MutableComponent getName() {
+                return Component.translatable(block.translationKey(), entry.displayName());
+            }
+        };
+    }
+
+    public static Block createLeaves(BlockType block, PaletteEntry entry) {
+        return new LeavesBlock(block.properties().apply(entry)) {
+            @Override
+            public MutableComponent getName() {
+                return Component.translatable(block.translationKey(), entry.displayName());
+            }
+        };
+    }
+
     public static Block createTorch(BlockType block, PaletteEntry entry) {
         throw new NotImplementedException("Torches not implemented!");
     }
