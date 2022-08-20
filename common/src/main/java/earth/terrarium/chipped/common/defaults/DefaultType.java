@@ -2,11 +2,13 @@ package earth.terrarium.chipped.common.defaults;
 
 import earth.terrarium.chipped.Chipped;
 import earth.terrarium.chipped.api.BlockType;
+import earth.terrarium.chipped.api.PaletteEntry;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.Locale;
+import java.util.function.Function;
 
 public enum DefaultType implements BlockType {
     ACACIA_LEAVES(Blocks.ACACIA_LEAVES),
@@ -198,8 +200,8 @@ public enum DefaultType implements BlockType {
     }
 
     @Override
-    public BlockBehaviour.Properties properties() {
-        return properties;
+    public Function<PaletteEntry, BlockBehaviour.Properties> properties() {
+        return entry -> properties;
     }
 
     @Override

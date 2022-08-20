@@ -11,7 +11,7 @@ public class ChippedBlock extends Block {
     private final PaletteEntry paletteEntry;
 
     public ChippedBlock(BlockType type, PaletteEntry entry) {
-        super(type.properties());
+        super(type.properties().apply(entry));
         this.type = type;
         this.paletteEntry = entry;
     }
