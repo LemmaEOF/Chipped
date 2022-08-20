@@ -1,20 +1,21 @@
 package earth.terrarium.chipped.common.registry;
 
-import dev.architectury.injectables.annotations.ExpectPlatform;
 import earth.terrarium.chipped.api.BlockType;
+import earth.terrarium.chipped.api.PaletteEntry;
 import earth.terrarium.chipped.api.PaletteType;
 import earth.terrarium.chipped.common.blocks.ChippedBlock;
 import earth.terrarium.chipped.common.blocks.base.ChippedBlockFactory;
+import earth.terrarium.chipped.common.defaults.ColoredPalette;
 import earth.terrarium.chipped.common.defaults.DefaultPalette;
 import earth.terrarium.chipped.common.defaults.DefaultType;
+import earth.terrarium.chipped.common.items.ChippedBlockItem;
+import earth.terrarium.chipped.common.utils.ModUtils;
 import net.minecraft.core.Registry;
-import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
-import java.util.HashSet;
 import java.util.Set;
-import java.util.function.Supplier;
 
 public class ChippedBlocks {
 
@@ -28,16 +29,26 @@ public class ChippedBlocks {
     }
 
     public static <T extends Block> void registerBlockWithPalette(BlockType block, PaletteType palette, ChippedBlockFactory<T> factory, Set<String> blacklisted) {
-        for (int i = 0; i < palette.palette().size(); i++) {
-            final var paletteEntry = palette.palette().get(i);
-            if(blacklisted.contains(paletteEntry.id())) continue;
-            registerBlockWithItem(String.format("%s/%d", block.id(), i), () -> factory.create(block, paletteEntry));
+        ModUtils.forIEach(palette.palette(), (entry, i) -> {
+            if(!blacklisted.contains(entry.id())) {
+                String id = String.format("%s/%d", block.id(), i);
+                var tempBlock = RegistryHandlerOfChipped.register(Registry.BLOCK, id, () -> factory.create(block, entry));
+                RegistryHandlerOfChipped.register(Registry.ITEM, id, () -> new ChippedBlockItem(palette, tempBlock.get(), new Item.Properties()));
+            }
+        });
+    }
+
+    public static <T extends Block> void registerColoredBlocks(BlockType block, PaletteType palette, ChippedBlockFactory<T> factory) {
+        for (DyeColor value : DyeColor.values()) {
+            registerBlockWithPalette(block, ColoredPalette.of(value, palette), factory);
         }
     }
 
-    public static <T extends Block> Supplier<T> registerBlockWithItem(String id, Supplier<T> block) {
-        var tempBlock = RegistryHandlerOfChipped.register(Registry.BLOCK, id, block);
-        RegistryHandlerOfChipped.register(Registry.ITEM, id, () -> new BlockItem(tempBlock.get(), new Item.Properties()));
-        return tempBlock;
+    private static <T extends Block> void registerColoredBlock(BlockType block, ColoredPalette palette, DyeColor color, ChippedBlockFactory<T> factory) {
+        ModUtils.forIEach(palette.palette(), (entry, i) -> {
+            String id = String.format("%s/%d/%s", block.id(), i, color.getName());
+            var tempBlock = RegistryHandlerOfChipped.register(Registry.BLOCK, id, () -> factory.create(block, entry));
+            RegistryHandlerOfChipped.register(Registry.ITEM, id, () -> new ChippedBlockItem(palette, tempBlock.get(), new Item.Properties()));
+        });
     }
 }
