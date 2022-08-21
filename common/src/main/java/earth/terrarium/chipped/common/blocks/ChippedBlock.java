@@ -1,6 +1,8 @@
 package earth.terrarium.chipped.common.blocks;
 
+import earth.terrarium.chipped.Chipped;
 import earth.terrarium.chipped.api.BlockType;
+import earth.terrarium.chipped.api.DyeableEntry;
 import earth.terrarium.chipped.api.PaletteEntry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -18,6 +20,14 @@ public class ChippedBlock extends Block {
 
     @Override
     public MutableComponent getName() {
-        return Component.translatable(type.translationKey(), paletteEntry.displayName());
+        return crateName(type, paletteEntry);
+    }
+
+    public static MutableComponent crateName(BlockType type, PaletteEntry entry) {
+        final MutableComponent text = Component.translatable(entry.translationKey(), Component.translatable(type.translationKey()));
+        if (entry instanceof DyeableEntry dyeableEntry) {
+            return Component.translatable(String.join(".", "color_type", Chipped.MOD_ID, dyeableEntry.color().getName()), text);
+        }
+        return text;
     }
 }

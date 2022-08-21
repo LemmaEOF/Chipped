@@ -35,8 +35,8 @@ public class ColoredPalette implements PaletteType {
     private record ColoredEntry(DyeColor color, PaletteEntry entry) implements DyeableEntry, PaletteEntry {
 
         @Override
-        public Component displayName() {
-            return this.entry.displayName();
+        public String translationKey() {
+            return this.entry.translationKey();
         }
 
         @Override

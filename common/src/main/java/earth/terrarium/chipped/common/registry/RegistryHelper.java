@@ -6,7 +6,7 @@ import org.apache.commons.lang3.NotImplementedException;
 
 import java.util.function.Supplier;
 
-public class RegistryHandlerOfChipped {
+public class RegistryHelper {
 
     @ExpectPlatform
     public static <V, T extends V> Supplier<T> register(Registry<V> registry, String id, Supplier<T> object) {

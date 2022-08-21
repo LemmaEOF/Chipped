@@ -1,12 +1,12 @@
 package earth.terrarium.chipped.common.registry;
 
 import earth.terrarium.chipped.api.BlockType;
-import earth.terrarium.chipped.api.PaletteEntry;
 import earth.terrarium.chipped.api.PaletteType;
 import earth.terrarium.chipped.common.blocks.BlockHelper;
 import earth.terrarium.chipped.common.blocks.ChippedBlock;
 import earth.terrarium.chipped.common.blocks.base.ChippedBlockFactory;
 import earth.terrarium.chipped.common.defaults.ColoredPalette;
+import earth.terrarium.chipped.common.defaults.ColoredTypes;
 import earth.terrarium.chipped.common.defaults.DefaultPalette;
 import earth.terrarium.chipped.common.defaults.DefaultType;
 import earth.terrarium.chipped.common.items.ChippedBlockItem;
@@ -36,6 +36,23 @@ public class ChippedBlocks {
         registerBlockWithPalette(DefaultType.SPRUCE_PLANKS, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.WARPED_PLANKS, DefaultPalette.TEST, ChippedBlock::new);
 
+        //Region Metal
+        registerBlockWithPalette(DefaultType.COPPER_BLOCK, DefaultPalette.METAL, ChippedBlock::new, "panels", "plated");
+        registerBlockWithPalette(DefaultType.COPPER_EXPOSED_BLOCK, DefaultPalette.METAL, ChippedBlock::new, "panels", "plated");
+        registerBlockWithPalette(DefaultType.COPPER_OXIDIZED_BLOCK, DefaultPalette.METAL, ChippedBlock::new, "panels", "plated");
+        registerBlockWithPalette(DefaultType.COPPER_WEATHERED_BLOCK, DefaultPalette.METAL, ChippedBlock::new, "panels", "plated");
+
+        registerBlockWithPalette(DefaultType.DIAMOND_BLOCK, DefaultPalette.METAL, ChippedBlock::new, "polished");
+        registerBlockWithPalette(DefaultType.EMERALD_BLOCK, DefaultPalette.METAL, ChippedBlock::new, "pressed");
+        registerBlockWithPalette(DefaultType.GOLD_BLOCK, DefaultPalette.METAL, ChippedBlock::new, "polished");
+        registerBlockWithPalette(DefaultType.IRON_BLOCK, DefaultPalette.METAL, ChippedBlock::new, "embossed");
+        registerBlockWithPalette(DefaultType.NETHERITE_BLOCK, DefaultPalette.METAL, ChippedBlock::new, "ancient");
+        //endregion
+
+        //region Stone
+        registerBlockWithPalette(DefaultType.STONE, DefaultPalette.STONE, ChippedBlock::new);
+        //endregion
+
         registerBlockWithPalette(DefaultType.AMETHYST_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.ANCIENT_DEBRIS, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.ANDESITE, DefaultPalette.TEST, ChippedBlock::new);
@@ -52,29 +69,24 @@ public class ChippedBlocks {
         registerBlockWithPalette(DefaultType.COAL_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.COBBLESTONE, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.COBWEB, DefaultPalette.TEST, BlockHelper::createWeb);
-        registerBlockWithPalette(DefaultType.COPPER_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.CRIMSON_FUNGUS, DefaultPalette.TEST, BlockHelper.createMushroom(() -> TreeFeatures.CRIMSON_FUNGUS));
         registerBlockWithPalette(DefaultType.CRIMSON_ROOTS, DefaultPalette.TEST, BlockHelper::createRoots);
         registerBlockWithPalette(DefaultType.CRYING_OBSIDIAN, DefaultPalette.TEST, BlockHelper::createCryingObsidian);
         registerBlockWithPalette(DefaultType.DARK_PRISMARINE, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.DEEPSLATE, DefaultPalette.TEST, ChippedBlock::new);
-        registerBlockWithPalette(DefaultType.DIAMOND_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.DIORITE, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.DIRT, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.DRIED_KELP_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.DRIPSTONE_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
-        registerBlockWithPalette(DefaultType.EMERALD_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.END_STONE, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.GILDED_BLACKSTONE, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.GLASS, DefaultPalette.TEST, BlockHelper::createGlass);
         registerBlockWithPalette(DefaultType.GLASS_PANE, DefaultPalette.TEST, BlockHelper::createPane);
         registerBlockWithPalette(DefaultType.GLOWSTONE, DefaultPalette.TEST, ChippedBlock::new);
-        registerBlockWithPalette(DefaultType.GOLD_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.GRANITE, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.GRAVEL, DefaultPalette.TEST, BlockHelper::createGravel);
         registerBlockWithPalette(DefaultType.HAY_BLOCK, DefaultPalette.TEST, BlockHelper::createHayBale);
         registerBlockWithPalette(DefaultType.ICE, DefaultPalette.TEST, ChippedBlock::new);
-        registerBlockWithPalette(DefaultType.IRON_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.LANTERN, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.LAPIS_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.LILY_PAD, DefaultPalette.TEST, BlockHelper::createWaterLily);
@@ -86,7 +98,6 @@ public class ChippedBlocks {
         registerBlockWithPalette(DefaultType.NETHER_BRICKS, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.NETHER_SPROUTS, DefaultPalette.TEST, BlockHelper::createNetherSprouts);
         registerBlockWithPalette(DefaultType.NETHER_WART_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
-        registerBlockWithPalette(DefaultType.NETHERITE_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.NETHERRACK, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.OBSIDIAN, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.PACKED_ICE, DefaultPalette.TEST, ChippedBlock::new);
@@ -110,7 +121,6 @@ public class ChippedBlocks {
         registerBlockWithPalette(DefaultType.SNOW_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.SOUL_SAND, DefaultPalette.TEST, BlockHelper::createSoulSand);
         registerBlockWithPalette(DefaultType.SPRUCE_LEAVES, DefaultPalette.TEST, ChippedBlock::new);
-        registerBlockWithPalette(DefaultType.STONE, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.TERRACOTTA, DefaultPalette.TEST, ChippedBlock::new);
         //registerBlockWithPalette(DefaultType.TORCH, DefaultPalette.TEST, ChippedBlock::new);
         registerBlockWithPalette(DefaultType.TUFF, DefaultPalette.TEST, ChippedBlock::new);
@@ -118,33 +128,39 @@ public class ChippedBlocks {
         registerBlockWithPalette(DefaultType.WARPED_FUNGUS, DefaultPalette.TEST, BlockHelper.createMushroom(() -> TreeFeatures.WARPED_FUNGUS));
         registerBlockWithPalette(DefaultType.WARPED_ROOTS, DefaultPalette.TEST, BlockHelper::createRoots);
         registerBlockWithPalette(DefaultType.WARPED_WART_BLOCK, DefaultPalette.TEST, ChippedBlock::new);
+
+        registerColoredBlocks(ColoredTypes.CARPET, DefaultPalette.TEST, BlockHelper::createCarpet);
     }
 
     public static <T extends Block>  void registerBlockWithPalette(BlockType block, PaletteType palette, ChippedBlockFactory<T> factory) {
         registerBlockWithPalette(block, palette, factory, Set.of());
     }
 
+    public static <T extends Block>  void registerBlockWithPalette(BlockType block, PaletteType palette, ChippedBlockFactory<T> factory, String... blacklisted) {
+        registerBlockWithPalette(block, palette, factory, Set.of(blacklisted));
+    }
+
     public static <T extends Block> void registerBlockWithPalette(BlockType block, PaletteType palette, ChippedBlockFactory<T> factory, Set<String> blacklisted) {
         ModUtils.forIEach(palette.palette(), (entry, i) -> {
             if(!blacklisted.contains(entry.id())) {
                 String id = String.format("%s/%d", block.id(), i);
-                var tempBlock = RegistryHandlerOfChipped.register(Registry.BLOCK, id, () -> factory.create(block, entry));
-                RegistryHandlerOfChipped.register(Registry.ITEM, id, () -> new ChippedBlockItem(palette, tempBlock.get(), new Item.Properties()));
+                var tempBlock = RegistryHelper.register(Registry.BLOCK, id, () -> factory.create(block, entry));
+                RegistryHelper.register(Registry.ITEM, id, () -> new ChippedBlockItem(palette, tempBlock.get(), new Item.Properties()));
             }
         });
     }
 
     public static <T extends Block> void registerColoredBlocks(BlockType block, PaletteType palette, ChippedBlockFactory<T> factory) {
         for (DyeColor value : DyeColor.values()) {
-            registerBlockWithPalette(block, ColoredPalette.of(value, palette), factory);
+            registerColoredBlock(block, ColoredPalette.of(value, palette), value, factory);
         }
     }
 
     private static <T extends Block> void registerColoredBlock(BlockType block, ColoredPalette palette, DyeColor color, ChippedBlockFactory<T> factory) {
         ModUtils.forIEach(palette.palette(), (entry, i) -> {
             String id = String.format("%s/%d/%s", block.id(), i, color.getName());
-            var tempBlock = RegistryHandlerOfChipped.register(Registry.BLOCK, id, () -> factory.create(block, entry));
-            RegistryHandlerOfChipped.register(Registry.ITEM, id, () -> new ChippedBlockItem(palette, tempBlock.get(), new Item.Properties()));
+            var tempBlock = RegistryHelper.register(Registry.BLOCK, id, () -> factory.create(block, entry));
+            RegistryHelper.register(Registry.ITEM, id, () -> new ChippedBlockItem(palette, tempBlock.get(), new Item.Properties()));
         });
     }
 }

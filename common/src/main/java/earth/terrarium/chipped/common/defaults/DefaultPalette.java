@@ -10,8 +10,16 @@ import java.util.Arrays;
 import java.util.List;
 
 public enum DefaultPalette implements PaletteType {
-    STONE("stone", "happy", "sad", "bricks", "tile", "urmom", "is", "so", "fat", "that", "she", "killed", "the", "sun"),
-    TEST("test", "test")
+    METAL("metal", "ancient", "chipped", "embossed", "engraved", "panels", "layered", "plated", "polished", "pressed", "reinforced", "sheet", "shuttered", "stacked"),
+    STONE("stone", "angry", "blank", "bordered", "brick_bordered", "carved", "checkered", "cobbled", "cracked_disordered_bricks", "cracked_flat_tiles", "cracked_bricks", "cracked_carving", "cut_blank", "cut_glad", "cut_column", "duh_carving", "edged_bricks", "engraved", "eroded", "etched", "flat_tiles", "inlaid", "inscribed", "laid_bricks", "loded", "offset_bricks", "overlapping_tiles", "pillar_bricks", "polished", "prismal_remnants", "rough", "rounded_bricks", "runic_carved", "sad_carving", "sanded", "small_bricks", "smooth_inlaid", "smooth_ringed", "smooth_column", "smoothed_double_inlaid", "spider_carving", "spiraled", "stacked_bricks", "thick_inlaid", "tiled_bordered", "tiled", "tiled_column", "tiny_layered_bricks", "tiny_layered_slabs", "tiny_bricks", "tiny_brick_bordered", "trodden", "bricks", "mini_tiles", "scales", "unamused_carving", "vertical_cut", "vertical_disordered_bricks", "weathered"),
+
+
+
+
+
+
+
+    TEST("test", "test"),
     ;
 
     private final String id;
@@ -42,8 +50,8 @@ public enum DefaultPalette implements PaletteType {
         }
 
         @Override
-        public Component displayName() {
-            return ComponentUtils.makeTranslation("palette", Chipped.MOD_ID, paletteName, name);
+        public String translationKey() {
+            return String.join(".", "palette", Chipped.MOD_ID, paletteName, name);
         }
 
         @Override
