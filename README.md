@@ -22,7 +22,7 @@ Coders:
 
 * Grim
 * ThatGravyBoat
-* CodexAdria
+* CodexAdrian
 * AlexNijjar
 
 Artists:
