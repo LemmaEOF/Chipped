@@ -8,16 +8,15 @@ import com.grimbo.chipped.registry.ChippedMenuType;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
-import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.color.item.ItemColor;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.GrassColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -80,13 +79,13 @@ public class ChippedClient implements ClientModInitializer {
             ColorProviderRegistry.ITEM.register(itemBlockColorHandler, vine);
         }
 
-        ScreenRegistry.register(ChippedMenuType.botanistWorkbench, ChippedScreen::new);
-        ScreenRegistry.register(ChippedMenuType.glassblower, ChippedScreen::new);
-        ScreenRegistry.register(ChippedMenuType.carpentersTable, ChippedScreen::new);
-        ScreenRegistry.register(ChippedMenuType.loomTable, ChippedScreen::new);
-        ScreenRegistry.register(ChippedMenuType.masonTable, ChippedScreen::new);
-        ScreenRegistry.register(ChippedMenuType.alchemyBench, ChippedScreen::new);
-        ScreenRegistry.register(ChippedMenuType.mechanistWorkbench, ChippedScreen::new);
+        MenuScreens.register(ChippedMenuType.botanistWorkbench, ChippedScreen::new);
+        MenuScreens.register(ChippedMenuType.glassblower, ChippedScreen::new);
+        MenuScreens.register(ChippedMenuType.carpentersTable, ChippedScreen::new);
+        MenuScreens.register(ChippedMenuType.loomTable, ChippedScreen::new);
+        MenuScreens.register(ChippedMenuType.masonTable, ChippedScreen::new);
+        MenuScreens.register(ChippedMenuType.alchemyBench, ChippedScreen::new);
+        MenuScreens.register(ChippedMenuType.mechanistWorkbench, ChippedScreen::new);
     }
 
     private static <T extends Block> void renderType(List<T> blockArrayList, RenderType renderType) {

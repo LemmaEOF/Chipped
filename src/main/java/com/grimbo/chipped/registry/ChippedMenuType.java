@@ -3,6 +3,7 @@ package com.grimbo.chipped.registry;
 import com.grimbo.chipped.Chipped;
 import com.grimbo.chipped.menus.ChippedMenu;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.MenuType;
 
@@ -19,19 +20,19 @@ public class ChippedMenuType {
 	public static MenuType<ChippedMenu> mechanistWorkbench;
 
 	public static void register() {
-		botanistWorkbench = ScreenHandlerRegistry.registerSimple(new ResourceLocation(Chipped.MOD_ID, "botanist_workbench"),
-				(id, inventory) -> new ChippedMenu(id, inventory, botanistWorkbench, ChippedSerializer.BOTANIST_WORKBENCH_TYPE, ChippedBlocks.BOTANIST_WORKBENCH));
-		glassblower = ScreenHandlerRegistry.registerSimple(new ResourceLocation(Chipped.MOD_ID, "glassblower"),
-				(id, inventory) -> new ChippedMenu(id, inventory, glassblower, ChippedSerializer.GLASSBLOWER_TYPE, ChippedBlocks.GLASSBLOWER));
-		carpentersTable = ScreenHandlerRegistry.registerSimple(new ResourceLocation(Chipped.MOD_ID, "carpenters_table"),
-				(id, inventory) -> new ChippedMenu(id, inventory, carpentersTable, ChippedSerializer.CARPENTERS_TABLE_TYPE, ChippedBlocks.CARPENTERS_TABLE));
-		loomTable = ScreenHandlerRegistry.registerSimple(new ResourceLocation(Chipped.MOD_ID, "loom_table"),
-				(id, inventory) -> new ChippedMenu(id, inventory, loomTable, ChippedSerializer.LOOM_TABLE_TYPE, ChippedBlocks.LOOM_TABLE));
-		masonTable = ScreenHandlerRegistry.registerSimple(new ResourceLocation(Chipped.MOD_ID, "mason_table"),
-				(id, inventory) -> new ChippedMenu(id, inventory, masonTable, ChippedSerializer.MASON_TABLE_TYPE, ChippedBlocks.MASON_TABLE));
-		alchemyBench = ScreenHandlerRegistry.registerSimple(new ResourceLocation(Chipped.MOD_ID, "alchemy_bench"),
-				(id, inventory) -> new ChippedMenu(id, inventory, alchemyBench, ChippedSerializer.ALCHEMY_BENCH_TYPE, ChippedBlocks.ALCHEMY_BENCH));
-		mechanistWorkbench = ScreenHandlerRegistry.registerSimple(new ResourceLocation(Chipped.MOD_ID, "mechanist_workbench"),
-				(id, inventory) -> new ChippedMenu(id, inventory, mechanistWorkbench, ChippedSerializer.MECHANIST_WORKBENCH_TYPE, ChippedBlocks.MECHANIST_WORKBENCH));
+		botanistWorkbench = Registry.register(Registry.MENU, new ResourceLocation(Chipped.MOD_ID, "botanist_workbench"),
+				new MenuType<>((id, inventory) -> new ChippedMenu(id, inventory, botanistWorkbench, ChippedSerializer.BOTANIST_WORKBENCH_TYPE, ChippedBlocks.BOTANIST_WORKBENCH)));
+		glassblower = Registry.register(Registry.MENU, new ResourceLocation(Chipped.MOD_ID, "glassblower"),
+				new MenuType<>((id, inventory) -> new ChippedMenu(id, inventory, glassblower, ChippedSerializer.GLASSBLOWER_TYPE, ChippedBlocks.GLASSBLOWER)));
+		carpentersTable = Registry.register(Registry.MENU, new ResourceLocation(Chipped.MOD_ID, "carpenters_table"),
+				new MenuType<>((id, inventory) -> new ChippedMenu(id, inventory, carpentersTable, ChippedSerializer.CARPENTERS_TABLE_TYPE, ChippedBlocks.CARPENTERS_TABLE)));
+		loomTable = Registry.register(Registry.MENU, new ResourceLocation(Chipped.MOD_ID, "loom_table"),
+				new MenuType<>((id, inventory) -> new ChippedMenu(id, inventory, loomTable, ChippedSerializer.LOOM_TABLE_TYPE, ChippedBlocks.LOOM_TABLE)));
+		masonTable = Registry.register(Registry.MENU, new ResourceLocation(Chipped.MOD_ID, "mason_table"),
+				new MenuType<>((id, inventory) -> new ChippedMenu(id, inventory, masonTable, ChippedSerializer.MASON_TABLE_TYPE, ChippedBlocks.MASON_TABLE)));
+		alchemyBench = Registry.register(Registry.MENU, new ResourceLocation(Chipped.MOD_ID, "alchemy_bench"),
+				new MenuType<>((id, inventory) -> new ChippedMenu(id, inventory, alchemyBench, ChippedSerializer.ALCHEMY_BENCH_TYPE, ChippedBlocks.ALCHEMY_BENCH)));
+		mechanistWorkbench = Registry.register(Registry.MENU, new ResourceLocation(Chipped.MOD_ID, "mechanist_workbench"),
+				new MenuType<>((id, inventory) -> new ChippedMenu(id, inventory, mechanistWorkbench, ChippedSerializer.MECHANIST_WORKBENCH_TYPE, ChippedBlocks.MECHANIST_WORKBENCH)));
 	}
 }

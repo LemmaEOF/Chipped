@@ -37,13 +37,13 @@
     "client": [
       "com.grimbo.chipped.ChippedClient"
     ],
-    "rei_plugins": [
-      "com.grimbo.chipped.compat.REIChippedPlugin"
+    "emi": [
+      "com.grimbo.chipped.compat.EmiChippedPlugin"
     ]
   },
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.18.x"
+    "minecraft": "1.19.x"
   }
 }

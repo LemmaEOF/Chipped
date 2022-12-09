@@ -2508,5 +2508,14 @@
   "container.chipped.mason_table": "Mason's Table",
   "container.chipped.alchemy_bench": "Scholar's Table",
   "container.chipped.mechanist_workbench": "Tinkerer's Table",
+
+  "emi.category.chipped.botanist_workbench": "Botanist's Table",
+  "emi.category.chipped.glassblower": "Glassblower's Table",
+  "emi.category.chipped.carpenters_table": "Carpenter's Table",
+  "emi.category.chipped.loom_table": "Shepherd's Table",
+  "emi.category.chipped.mason_table": "Mason's Table",
+  "emi.category.chipped.alchemy_bench": "Scholar's Table",
+  "emi.category.chipped.mechanist_workbench": "Tinkerer's Table",
+
   "itemGroup.chipped.chipped": "Chipped"
 }
