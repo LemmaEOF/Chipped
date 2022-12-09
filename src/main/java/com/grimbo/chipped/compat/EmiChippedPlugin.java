@@ -47,7 +47,7 @@ public class EmiChippedPlugin implements EmiPlugin {
 				for (Item item : tag.stream().map(Holder::value).toList()) {
 					registry.addRecipe(
 							new EmiChippedRecipe(category,
-							new ResourceLocation(Chipped.MOD_ID, category.id.getPath() + "_" + Registry.ITEM.getKey(item).getPath()),
+							new ResourceLocation(Chipped.MOD_ID, "/" + category.id.getPath() + "_" + Registry.ITEM.getKey(item).getPath()),
 							Ingredient.of(tag.stream().map(ItemStack::new)),
 							new ItemStack(item))
 					);
